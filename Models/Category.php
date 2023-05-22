@@ -2,16 +2,26 @@
 
 require_once __DIR__. '/Products.php';
 
-class Category extends Products
+class Category
 {
     public string $animalType;
     public string $icon;
 
 
-    public function __construct($animalType, $icon, $name, $brand, $price, $image)
+    public function __construct($animalType)
     {
-        parent::__construct($name, $brand, $price, $image);
         $this->animalType = $animalType;
-        $this->icon = $icon;
+        $this->icon = $this->Icon($animalType);
+    }
+
+    public function Icon($animalType)
+    {
+        if($animalType == 'dog'){
+          return '<i class="fa-solid fa-dog"></i>';  
+        }
+        else{
+            return '<i class="fa-solid fa-cat"></i>';
+        }
     }
 }
+
