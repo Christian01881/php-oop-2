@@ -13,7 +13,7 @@ $products = [
     new Accessories('Nylon', 'Accessorio', 'PetLover', 12.50, './img/CatAccessory.jpg', new Category('cat'))       
 ];
 
-var_dump($products);
+// var_dump($products);
 
 
 

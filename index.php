@@ -14,7 +14,7 @@ include __DIR__. '/data/db.php';
     <title>Document</title>
 </head>
 <body>
-    <header class="d-flex justify-content-center align-items-center">
+    <header class="d-flex justify-content-center align-items-center style">
         <h1>PetShop</h1>
     </header>
 
@@ -25,16 +25,24 @@ include __DIR__. '/data/db.php';
             <div class="card-body">
                 <h4 class="card-title"><?php echo $product->name ?></h4>
                 <p><?php echo $product->Icon($product->category->animalType) ?></p>
-                <p><?php echo $product->price ?> €</p>
-                
-
+                <p><span><strong>Prezzo: </strong></span><?php echo $product->price ?> €</p>
+                <?php  if(is_a($product, 'Food')) { ?>
+                    <p><span><strong>Gusto: </strong></span><?php echo $product->taste ?></p>
+                <?php } ?>
+                <?php  if(is_a($product, 'Toy')) { ?>
+                    <p><span><strong>Colore: </strong></span><?php echo $product->color ?></p>
+                <?php } ?>
+                <?php  if(is_a($product, 'Accessories')) { ?>
+                    <p><span><strong>Materiale: </strong></span><?php echo $product->material ?></p>
+                <?php } ?>
+                <p><span><strong>Marca: </strong><?php echo $product->brand ?></span></p>
             </div>
         </div>
         <?php } ?>
     </main>
 
-    <footer>
-
+    <footer class="d-flex justify-content-center align-items-center mt-5 style ">
+        <h4>Made with &hearts; by Christian</h4>
     </footer>
 
 
