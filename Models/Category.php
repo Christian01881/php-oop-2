@@ -14,14 +14,14 @@ class Category
         $this->icon = $this->Icon($animalType);
     }
 
-    public function Icon($animalType)
-    {
-        if($animalType == 'dog'){
-          return '<i class="fa-solid fa-dog"></i>';  
+        public function Icon($animalType)
+        {
+            if($animalType == 'dog'){
+            return '<i class="fa-solid fa-dog"></i>';  
+            }
+            else{
+                return '<i class="fa-solid fa-cat"></i>';
+            }
         }
-        else{
-            return '<i class="fa-solid fa-cat"></i>';
-        }
-    }
 }
 

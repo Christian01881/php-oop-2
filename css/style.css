@@ -1,0 +1,15 @@
+header{
+    background-color: blue;
+    color: white;
+    height: 80px;
+}
+
+.CPM-card{
+    width: calc((100% / 3) - 20px);
+}
+
+.CPM-img{
+    width: 100% !important;
+    height: 300px !important;
+}
+
