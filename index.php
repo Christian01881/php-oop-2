@@ -36,9 +36,13 @@ include __DIR__. '/data/db.php';
                     <p><span><strong>Materiale: </strong></span><?php echo $product->material ?></p>
                 <?php } ?>
                 <p><span><strong>Marca: </strong><?php echo $product->brand ?></span></p>
+                <p><?php if(property_exists($product, 'weight')) { ?>
+                    <?php echo  $product->getWeight() ?>
+                <?php } ?></p>
             </div>
-        </div>
+        </div>      
         <?php } ?>
+        
     </main>
 
     <footer class="d-flex justify-content-center align-items-center mt-5 style ">
